@@ -1,5 +1,5 @@
 # Nvidia-Tesla-P100
-# **Running vLLM on an NVIDIA Tesla P100 with LoRA,Paged Attention eGPTQ enabled.**
+# **Running vLLM on an NVIDIA Tesla P100 with LoRA,Paged Attention e GPTQ enabled.**
 
 In this repository you will find the **vLLM Legacy** Compatible with the Nvidia Tesla P100 16GB HBM2.
 
@@ -36,11 +36,11 @@ The **Legacy vLLM P100** resolves this bottleneck. We've ported the crucial opti
 | **Embedding** | **activated** | Working. |
 | **LoRA** | **activated** | Working. |
 
-With the**Paged Attention (via xFormers)**, **Scheduler**, **CUDA Graphs**and**KV Cache**Activated on the P100, we reached the absolute peak of what the P100 hardware can deliver. It's the pinnacle of portability and an excellent product for reviving these hardware systems in data centers around the world.
+With the**Paged Attention (via xFormers)**, **Scheduler**, **CUDA Graphs **and** KV Cache** Activated on the P100, we reached the absolute peak of what the P100 hardware can deliver. It's the pinnacle of portability and an excellent product for reviving these hardware systems in data centers around the world.
 
 ## **Integrated Enterprise-Class Features**
 
-* **vLLM Engine V0 Port**Automatic and transparent conversion of native GPTQ models to float16 (half)... for maximum mathematical efficiency in Pascal kernels.
+* **vLLM Engine V0 Port** Automatic and transparent conversion of native GPTQ models to float16 (half)... for maximum mathematical efficiency in Pascal kernels.
 
 * **XFormers Active Backend:** Replaces*FlashAttention-2*, ensuring low attention latency.
 
@@ -151,19 +151,12 @@ docker pull legacyvllm/legacy-vllm-tesla-p100-openai-lora:310726
 ### **Execute the initialization command in the terminal:**
 
 docker run \--gpus all \
-
 \-e LEGACY\_VLLM\_LICENSE\_KEY=" \*\*Request your trial key and enter it here\*\*" \
-
     \-p 8000:8000 \
-
     \-v \~/.cache/huggingface:/root/.cache/huggingface \
-
 legacy-vllm\\p100-openai-lora:310726 \
-
     \--model Qwen/Qwen2.5-1.5B-Instruct \
-
     \--gpu-memory-utilization 0.8 \
-
     \--max-model-len 2048
 
 ### 
