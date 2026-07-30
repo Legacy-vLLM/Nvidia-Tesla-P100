@@ -150,19 +150,19 @@ docker pull legacyvllm/legacy-vllm-tesla-p100-openai-lora:310726
 
 ### **Execute the initialization command in the terminal:**
 
-docker run \--gpus all \\
+docker run \--gpus all \
 
-\-e LEGACY\_VLLM\_LICENSE\_KEY=" \*\*Request your trial key and enter it here\*\*" \\
+\-e LEGACY\_VLLM\_LICENSE\_KEY=" \*\*Request your trial key and enter it here\*\*" \
 
-    \-p 8000:8000 \\
+    \-p 8000:8000 \
 
-    \-v \~/.cache/huggingface:/root/.cache/huggingface \\
+    \-v \~/.cache/huggingface:/root/.cache/huggingface \
 
-legacy-vllm\\p100-openai-lora:310726 \\
+legacy-vllm\\p100-openai-lora:310726 \
 
-    \--model Qwen/Qwen2.5-1.5B-Instruct \\
+    \--model Qwen/Qwen2.5-1.5B-Instruct \
 
-    \--gpu-memory-utilization 0.8 \\
+    \--gpu-memory-utilization 0.8 \
 
     \--max-model-len 2048
 
@@ -170,7 +170,7 @@ legacy-vllm\\p100-openai-lora:310726 \\
 
 ## **Security and Licensing Model**
 
-To meet stringent corporate security policies (including closed data centers and environments)*air-gapped*(without internet access), our licensing system uses**offline asymmetric cryptography**:
+To meet stringent corporate security policies (including closed data centers and environments)*air-gapped*(without internet access), our licensing system uses **offline asymmetric cryptography**:
 
 1. The Docker image contains only our **public key**.
 
@@ -185,3 +185,7 @@ To meet stringent corporate security policies (including closed data centers and
 Did you enjoy the trial? We offer monthly or annual licenses (we generate keys for your GPU cluster).
 
 To obtain your key or commercial proposals, contact us: **https://docs.google.com/forms/d/e/1FAIpQLSeJw9ZslKvIkDJtKjlVbirIJdfXlDiFhXMoQPivBWII\_Ok8wQ/viewform?usp=header**
+
+License & Copyright: All Rights Reserved. This repository is for demonstration and portfolio purposes only. Unauthorized commercial use, redistribution, or modification is prohibited. Contains third-party components under Apache 2.0 (see NOTICE).
+
+This product includes software developed by the vLLM project, licensed under the Apache License 2.0, and intellectual property modifications.
