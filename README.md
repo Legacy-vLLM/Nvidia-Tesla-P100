@@ -146,7 +146,7 @@ Get your test key using this form:
 
 ### **6\. Download the Legacy-Vllm docker image.**
 
-docker pull legacyvllm/legacy-vllm-tesla-p100-openai-lora:310726
+docker pull legacyvllm/legacy-vllm-tesla-p100-openai-lora:020826
 
 ### **Execute the initialization command in the terminal:**
 
