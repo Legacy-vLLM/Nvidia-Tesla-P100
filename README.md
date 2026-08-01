@@ -1,5 +1,6 @@
 # Nvidia-Tesla-P100
 # **Running vLLM on an NVIDIA Tesla P100 with LoRA,Paged Attention e GPTQ enabled.**
+https://youtu.be/ZMiH9l-IuV4?is=ewYiA24peLalRps4
 
 In this repository you will find the **vLLM Legacy** Compatible with the Nvidia Tesla P100 16GB HBM2.
 
