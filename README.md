@@ -42,7 +42,7 @@ With the**Paged Attention (via xFormers)**, **Scheduler**, **CUDA Graphs **and**
 
 * **vLLM Engine V0 Port** Automatic and transparent conversion of native GPTQ models to float16 (half)... for maximum mathematical efficiency in Pascal kernels.
 
-* **XFormers Active Backend:** Replaces*FlashAttention-2*, ensuring low attention latency.
+* **XFormers Active Backend:** Replaces *FlashAttention-2*, ensuring low attention latency.
 
 * **CUDA Graphs**: Captures static graphs of active execution, reducing CPU overhead during decoding in the warmup.
 
@@ -150,13 +150,13 @@ docker pull legacyvllm/legacy-vllm-tesla-p100-openai-lora:020826
 
 ### **Execute the initialization command in the terminal:**
 
-docker run \--gpus all \
-\-e LEGACY\_VLLM\_LICENSE\_KEY=" \*\*Request your trial key and enter it here\*\*" \
-    \-p 8000:8000 \
-    \-v \~/.cache/huggingface:/root/.cache/huggingface \
-legacy-vllm\\p100-openai-lora:310726 \
-    \--model Qwen/Qwen2.5-1.5B-Instruct \
-    \--gpu-memory-utilization 0.8 \
+docker run \--gpus all \\
+\-e LEGACY\_VLLM\_LICENSE\_KEY=" \*\*Request your trial key and enter it here\*\*" \\
+    \-p 8000:8000 \\
+    \-v \~/.cache/huggingface:/root/.cache/huggingface \\
+legacy-vllm\\p100-openai-lora:310726 \\
+    \--model Qwen/Qwen2.5-1.5B-Instruct \\
+    \--gpu-memory-utilization 0.8 \\
     \--max-model-len 2048
 
 ### 
