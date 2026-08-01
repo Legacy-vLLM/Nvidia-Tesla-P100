@@ -98,7 +98,7 @@ Certifique-se de possuir o nvidia-container-toolkit devidamente configurados no 
 o Docker moderno utiliza uma nova especificação chamada CDI (Container Device Interface) para se comunicar com as GPUs.
 Linux:
 Passo 1: Atualizar os repositórios do NVIDIA Container Toolkit
-curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \ && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \ sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \ sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \\ && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \\ sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \\ sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
 
 Passo 2: Instalar o Toolkit
 Atualize o apt e instale o pacote nvidia-container-toolkit:
@@ -135,17 +135,17 @@ https://docs.google.com/forms/d/e/1FAIpQLSeJw9ZslKvIkDJtKjlVbirIJdfXlDiFhXMoQPiv
 
 6. Baixe a imagem docker Legacy-Vllm
 
-docker pull legacyvllm/legacy-vllm-tesla-p100-openai-lora:310726
+docker pull legacyvllm/legacy-vllm-tesla-p100-openai-lora:020826
 
 
 Execute o comando de inicialização no terminal:
-docker run --gpus all \
-  -e LEGACY_VLLM_LICENSE_KEY=" **Solicite sua chave trial e coloque aqui**" \
-    -p 8000:8000 \
-    -v ~/.cache/huggingface:/root/.cache/huggingface \
-legacy-vllm\p100-openai-lora:300726 \
-    --model Qwen/Qwen2.5-1.5B-Instruct \
-    --gpu-memory-utilization 0.8 \
+docker run --gpus all \\
+  -e LEGACY_VLLM_LICENSE_KEY=" **Solicite sua chave trial e coloque aqui**" \\
+    -p 8000:8000 \\
+    -v ~/.cache/huggingface:/root/.cache/huggingface \\
+legacy-vllm\p100-openai-lora:300726 \\
+    --model Qwen/Qwen2.5-1.5B-Instruct \\
+    --gpu-memory-utilization 0.8 \\
     --max-model-len 2048
 
 Segurança e Modelo de Licenciamento
